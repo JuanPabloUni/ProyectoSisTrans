@@ -1,19 +1,19 @@
 -- TIPOSUSUARIO
 
 INSERT INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (1, 'cliente');
+VALUES (1, 'Cliente');
 
 INSERT INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (2, 'recepcionista');
+VALUES (2, 'Recepcionista');
 
 INSERT INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (3, 'empleado');
+VALUES (3, 'Empleado');
 
 INSERT INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (4, 'administrador');
+VALUES (4, 'Administrador');
 
 INSERT INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (5, 'gerente');
+VALUES (5, 'Gerente');
 
 -- USUARIOS
 
