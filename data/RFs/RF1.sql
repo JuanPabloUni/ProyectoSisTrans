@@ -1,7 +1,19 @@
 -- Create
 
 INSER INTO TIPOSUSUARIO (ID, TIPO)
-VALUES (1, 'empleado');
+VALUES (1, 'cliente');
+
+INSER INTO TIPOSUSUARIO (ID, TIPO)
+VALUES (2, 'recepcionista');
+
+INSER INTO TIPOSUSUARIO (ID, TIPO)
+VALUES (3, 'empleado');
+
+INSER INTO TIPOSUSUARIO (ID, TIPO)
+VALUES (4, 'administrador');
+
+INSER INTO TIPOSUSUARIO (ID, TIPO)
+VALUES (5, 'gerente');
 
 -- Read
 
@@ -12,11 +24,11 @@ WHERE TIPO = 'empleado';
 -- Update
 
 UPDATE TIPOSUSUARIO
-SET TIPO = 'Empleado'
-WHERE TIPO = 'empleado';
+SET TIPO = 'empleado'
+WHERE TIPO = 'cliente';
 
 -- Delete
 
 DELETE
 FROM TIPOSUSUARIO
-WHERE TIPO = 'Empleado';
+WHERE TIPO = 'recepcionista';
