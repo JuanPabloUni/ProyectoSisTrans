@@ -28,11 +28,11 @@ CREATE TABLE gimnasios (
 ALTER TABLE gimnasios ADD CONSTRAINT gimnasios_pk PRIMARY KEY ( servicios_id );
 
 CREATE TABLE habitaciones (
-    id             NUMBER NOT NULL,
-    numero         NUMBER NOT NULL,
-    piso           NUMBER NOT NULL,
-    reservas_id    NUMBER NOT NULL,
-    tipohabitacion NUMBER
+    id                 NUMBER NOT NULL,
+    numero             NUMBER NOT NULL,
+    piso               NUMBER NOT NULL,
+    reservas_id        NUMBER NOT NULL,
+    tiposhabitacion_id NUMBER NOT NULL
 );
 
 ALTER TABLE habitaciones ADD CONSTRAINT habitaciones_pk PRIMARY KEY ( id );
@@ -102,7 +102,7 @@ CREATE TABLE reservas (
     numnoches          NUMBER NOT NULL,
     numadultos         NUMBER NOT NULL,
     nummenores         NUMBER NOT NULL,
-    usuarios_id        NUMBER,
+    usuarios_id        NUMBER NOT NULL,
     planesdeconsumo_id NUMBER NOT NULL
 );
 
@@ -113,8 +113,8 @@ CREATE TABLE reservasservicio (
     fecha        DATE NOT NULL,
     horainicio   DATE NOT NULL,
     horafin      DATE NOT NULL,
-    reservas_id  NUMBER,
-    servicios_id NUMBER
+    reservas_id  NUMBER NOT NULL,
+    servicios_id NUMBER NOT NULL
 );
 
 ALTER TABLE reservasservicio ADD CONSTRAINT reservasservicio_pk PRIMARY KEY ( id );
@@ -174,7 +174,7 @@ CREATE TABLE usuarios (
     nombre          VARCHAR2(255 BYTE) NOT NULL,
     apellido        VARCHAR2(255 BYTE) NOT NULL,
     documento       VARCHAR2(255 BYTE) NOT NULL,
-    tiposusuario_id NUMBER
+    tiposusuario_id NUMBER NOT NULL
 );
 
 ALTER TABLE usuarios ADD CONSTRAINT usuarios_pk PRIMARY KEY ( id );
@@ -200,13 +200,13 @@ ALTER TABLE gimnasios
             ON DELETE CASCADE;
 
 ALTER TABLE habitaciones
-    ADD CONSTRAINT habitacion_tipohabitacion_fk FOREIGN KEY ( tipohabitacion )
-        REFERENCES tiposhabitacion ( id )
+    ADD CONSTRAINT habitaciones_reservas_fk FOREIGN KEY ( reservas_id )
+        REFERENCES reservas ( id )
             ON DELETE CASCADE;
 
 ALTER TABLE habitaciones
-    ADD CONSTRAINT habitaciones_reservas_fk FOREIGN KEY ( reservas_id )
-        REFERENCES reservas ( id )
+    ADD CONSTRAINT habitaciones_tipos_fk FOREIGN KEY ( tiposhabitacion_id )
+        REFERENCES tiposhabitacion ( id )
             ON DELETE CASCADE;
 
 ALTER TABLE internet
