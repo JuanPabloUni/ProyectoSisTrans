@@ -1,29 +1,22 @@
+-- Create
 
---Actualizar y registrar
+INSER INTO TIPOSUSUARIO (ID, TIPO)
+VALUES (1, 'empleado');
 
-UPDATE Usuarios
-SET tipo_usuario = 'nuevo_tipo_usuario'
-WHERE cedula = valor_de_cedula;
+-- Read
 
-UPDATE Usuarios
-SET tipo_usuario = 'empleado'
-WHERE cedula = 4;
+SELECT *
+FROM TIPOSUSUARIO
+WHERE TIPO = 'empleado';
 
---Eliminar
+-- Update
 
-DELETE FROM Usuarios
-WHERE tipo_usuario = 'tipo_usuario';
+UPDATE TIPOSUSUARIO
+SET TIPO = 'Empleado'
+WHERE TIPO = 'empleado';
 
+-- Delete
 
-DELETE FROM Usuarios
-WHERE tipo_usuario = 'empleado';
-
---Consultar
-
-SELECT tipo_usuario
-FROM Usuarios
-WHERE cedula = valor_de_cedula;
-
-SELECT tipo_usuario
-FROM Usuarios
-WHERE cedula = 4;
+DELETE
+FROM TIPOSUSUARIO
+WHERE TIPO = 'Empleado';
