@@ -31,7 +31,7 @@ CREATE TABLE habitaciones (
     id                 NUMBER NOT NULL,
     numero             NUMBER NOT NULL,
     piso               NUMBER NOT NULL,
-    reservas_id        NUMBER NOT NULL,
+    reservas_id        NUMBER,
     tiposhabitacion_id NUMBER NOT NULL
 );
 
