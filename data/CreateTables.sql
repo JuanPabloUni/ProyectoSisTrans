@@ -98,7 +98,7 @@ ALTER TABLE productos ADD CONSTRAINT productos_pk PRIMARY KEY ( id );
 CREATE TABLE reservas (
     id                 NUMBER NOT NULL,
     fechainicio        DATE NOT NULL,
-    fehcafin           DATE NOT NULL,
+    fechafin           DATE NOT NULL,
     numnoches          NUMBER NOT NULL,
     numadultos         NUMBER NOT NULL,
     nummenores         NUMBER NOT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE servicios (
 
 ALTER TABLE servicios
     ADD CHECK ( tiposervicio IN ( 'EstablecimientoConsumo', 'Gimnasio', 'Internet', 'Lavanderia', 'Piscina',
-                                  'Prestamo', 'SPA', 'Salon' ) );
+                                  'Prestamo', 'Salon', 'Spa' ) );
 
 ALTER TABLE servicios ADD CONSTRAINT servicios_pk PRIMARY KEY ( id );
 
