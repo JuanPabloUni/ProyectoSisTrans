@@ -103,7 +103,7 @@ CREATE TABLE reservas (
     numadultos         NUMBER NOT NULL,
     nummenores         NUMBER NOT NULL,
     usuarios_id        NUMBER NOT NULL,
-    planesdeconsumo_id NUMBER NOT NULL
+    planesdeconsumo_id NUMBER
 );
 
 ALTER TABLE reservas ADD CONSTRAINT reservas_pk PRIMARY KEY ( id );
@@ -205,7 +205,7 @@ ALTER TABLE habitaciones
             ON DELETE CASCADE;
 
 ALTER TABLE habitaciones
-    ADD CONSTRAINT habitaciones_tipos_fk FOREIGN KEY ( tiposhabitacion_id )
+    ADD CONSTRAINT habitaciones_tipo_fk FOREIGN KEY ( tiposhabitacion_id )
         REFERENCES tiposhabitacion ( id )
             ON DELETE CASCADE;
 
