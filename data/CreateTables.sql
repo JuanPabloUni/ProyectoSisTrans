@@ -9,7 +9,7 @@ ALTER TABLE cuentaconsumos ADD CONSTRAINT cuentaconsumos_pk PRIMARY KEY ( reserv
 CREATE TABLE establecimientos (
     servicios_id        NUMBER NOT NULL,
     tipoestablecimiento VARCHAR2(255 BYTE) NOT NULL,
-    estilo              VARCHAR2(255 BYTE) NOT NULL,
+    estilo              VARCHAR2(255 BYTE),
     capacidad           NUMBER NOT NULL
 );
 
