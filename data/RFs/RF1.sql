@@ -17,7 +17,7 @@ VALUES (5, 'gerente');
 
 -- Read
 
-SELECT *
+SELECT ID, TIPO
 FROM TIPOSUSUARIO
 WHERE TIPO = 'empleado';
 
