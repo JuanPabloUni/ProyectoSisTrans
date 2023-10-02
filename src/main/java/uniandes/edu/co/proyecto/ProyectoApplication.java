@@ -1,13 +1,13 @@
-package uniandes.edu.co.parranderos;
+package uniandes.edu.co.proyecto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ParranderosApplication{
+public class ProyectoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ParranderosApplication.class, args);
+		SpringApplication.run(ProyectoApplication.class, args);
 	}
 
 }
