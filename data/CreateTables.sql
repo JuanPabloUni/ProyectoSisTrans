@@ -10,7 +10,7 @@ CREATE TABLE establecimientos (
     servicios_id        NUMBER NOT NULL,
     tipoestablecimiento VARCHAR2(255 BYTE) NOT NULL,
     estilo              VARCHAR2(255 BYTE) NOT NULL,
-    capacidad           VARCHAR2(255 BYTE) NOT NULL
+    capacidad           NUMBER NOT NULL
 );
 
 ALTER TABLE establecimientos
