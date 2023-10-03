@@ -1,4 +1,4 @@
-package modelo;
+package uniandes.edu.co.proyecto.modelo;
 
 public class OfrecenProductoPK {
     
