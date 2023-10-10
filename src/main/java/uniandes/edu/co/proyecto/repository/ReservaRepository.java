@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.edu.co.proyecto.modelo.Servicio;
 
 public interface ReservaRepository extends JpaRepository <Reserva, Integer> {
 
