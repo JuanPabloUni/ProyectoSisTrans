@@ -8,12 +8,16 @@ import org.springframework.data.repository.query.Param;
 
 import uniandes.edu.co.proyecto.modelo.Spa;
 
-public interface SpaRepository extends JpaRepository<Spa, Integer> {
-
-    @Query(value = "SELECT * FROM spas", nativeQuery = true)
-    Collection<Spa> darSpas();
-
-    @Query(value = "SELECT * FROM spas WHERE servicios_id = :servicios_id", nativeQuery = true)
-    Spa darSpa(@Param("servicios_id") int servicios_id);
+public class SpaRepository {
     
 }
+
+// public interface SpaRepository extends JpaRepository<Spa, Integer> {
+
+//     // @Query(value = "SELECT * FROM spas", nativeQuery = true)
+//     // Collection<Spa> darSpas();
+
+//     // @Query(value = "SELECT * FROM spas WHERE servicios_id = :servicios_id", nativeQuery = true)
+//     // Spa darSpa(@Param("servicios_id") int servicios_id);
+    
+// }

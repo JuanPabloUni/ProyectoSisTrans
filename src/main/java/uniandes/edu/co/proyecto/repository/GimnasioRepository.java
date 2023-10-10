@@ -8,12 +8,16 @@ import org.springframework.data.repository.query.Param;
 
 import uniandes.edu.co.proyecto.modelo.Gimnasio;
 
-public interface GimnasioRepository extends JpaRepository <Gimnasio, Integer> {
+public class GimnasioRepository {
     
-    @Query(value = "SELECT * FROM gimnasios", nativeQuery = true)
-    Collection<Gimnasio> darGimnasios();
-
-    @Query(value = "SELECT * FROM gimnasios WHERE id = :servicios_id", nativeQuery = true)
-    Gimnasio darGimnasio(@Param("servicios_id") int id);
-
 }
+
+// public interface GimnasioRepository extends JpaRepository <Gimnasio, Integer> {
+    
+//     // @Query(value = "SELECT * FROM gimnasios", nativeQuery = true)
+//     // Collection<Gimnasio> darGimnasios();
+
+//     // @Query(value = "SELECT * FROM gimnasios WHERE id = :servicios_id", nativeQuery = true)
+//     // Gimnasio darGimnasio(@Param("servicios_id") int id);
+
+// }
