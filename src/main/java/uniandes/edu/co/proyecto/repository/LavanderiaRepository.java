@@ -7,17 +7,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import uniandes.edu.co.proyecto.modelo.Lavanderia;
+import uniandes.edu.co.proyecto.modelo.Servicio;
 
-public class LavanderiaRepository {
+public interface LavanderiaRepository extends JpaRepository <Servicio, Integer> {
+
+    @Query(value = "SELECT * FROM lavanderias", nativeQuery = true)
+    Collection<Lavanderia> darLavanderias();
+
+    @Query(value = "SELECT * FROM lavanderias WHERE servicios_id = :servicios_id", nativeQuery = true)
+    Lavanderia darLavanderia(@Param("servicios_id") int id);
     
 }
-
-// public interface LavanderiaRepository extends JpaRepository <Lavanderia, Integer> {
-
-//     // @Query(value = "SELECT * FROM lavanderias", nativeQuery = true)
-//     // Collection<Lavanderia> darLavanderias();
-
-//     // @Query(value = "SELECT * FROM lavanderias WHERE servicios_id = :servicios_id", nativeQuery = true)
-//     // Lavanderia darLavanderia(@Param("servicios_id") int id);
-    
-// }
