@@ -40,7 +40,7 @@ ALTER TABLE habitaciones ADD CONSTRAINT habitaciones_pk PRIMARY KEY ( id );
 CREATE TABLE internet (
     servicios_id NUMBER NOT NULL,
     capacidad    NUMBER NOT NULL,
-    costoxdia    NUMBER NOT NULL
+    costoxdia    FLOAT NOT NULL
 );
 
 ALTER TABLE internet ADD CONSTRAINT internet_pk PRIMARY KEY ( servicios_id );
