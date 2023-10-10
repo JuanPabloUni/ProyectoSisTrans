@@ -13,8 +13,8 @@ public class OfrecenProducto {
     public OfrecenProducto()
     {;}
 
-    public OfrecenProducto(Establecimiento establecimiento_id, Producto productos_id) {
-        this.pk = new OfrecenProductoPK(establecimiento_id, productos_id);
+    public OfrecenProducto(Servicio servicios_id, Producto productos_id) {
+        this.pk = new OfrecenProductoPK(servicios_id, productos_id);
     }
 
     public OfrecenProductoPK getPk() {

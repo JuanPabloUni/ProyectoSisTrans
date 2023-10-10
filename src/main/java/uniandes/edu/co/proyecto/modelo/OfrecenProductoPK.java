@@ -10,29 +10,29 @@ import jakarta.persistence.ManyToOne;
 public class OfrecenProductoPK implements Serializable {
     
     @ManyToOne
-    @JoinColumn(name = "establecimiento_id", referencedColumnName = "servicios_id")
-    private Establecimiento establecimiento_id;
+    @JoinColumn(name = "establecimiento_id", referencedColumnName = "id")
+    private Servicio servicios_id;
 
     @ManyToOne
     @JoinColumn(name = "productos_id", referencedColumnName = "id")
     private Producto productos_id;
 
-    public OfrecenProductoPK(Establecimiento establecimiento_id, Producto productos_id) {
+    public OfrecenProductoPK(Servicio servicios_id, Producto productos_id) {
         super();
-        this.establecimiento_id = establecimiento_id;
+        this.servicios_id = servicios_id;
         this.productos_id = productos_id;
     }
 
-    public Establecimiento getId_Establecimiento() {
-        return establecimiento_id;
+    public Servicio getId_Establecimiento() {
+        return servicios_id;
     }
 
     public Producto getId_Producto() {
         return productos_id;
     }
 
-    public void setId_Establecimiento(Establecimiento establecimiento_id) {
-        this.establecimiento_id = establecimiento_id;
+    public void setId_Establecimiento(Servicio servicios_id) {
+        this.servicios_id = servicios_id;
     }
 
     public void setId_Producto(Producto productos_id) {
